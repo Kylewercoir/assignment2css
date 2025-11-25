@@ -1,6 +1,23 @@
 /* -------------------------
    GLOBAL: Notebook Paper Background
 -------------------------- */
+@font-face {
+  font-family: 'HeadingDisplay';
+  src: url('../fonts/Cinzel-Regular.woff2') format('woff2'),
+       url('../fonts/Cinzel-Regular.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BodySerif';
+  src: url('../fonts/Lora-Regular.woff2') format('woff2'),
+       url('../fonts/Lora-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body {
     background: #ffffff;
     background-image: 
@@ -11,5 +28,45 @@ body {
     margin: 0;
     color: #111;
 }
+:root {
+  --heading-font: 'HeadingDisplay', 'Playfair Display', serif;
+  --body-font: 'BodySerif', Georgia, serif;
+}
 
-/* (Red margin line removed) */
+/* Basic reset / typography */
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+/* Heading style inspired by cover — spaced and dramatic */
+.heading-font {
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
+  color: #0f0f0f;
+  margin-bottom: .6rem;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg') center/cover no-repeat;
+}
+
+/* Book cover */
+.book-cover img {
+  max-width: 220px;
+  border-radius: 2px;
+}
+
+/* Subtle card and color tweaks */
+.card { border-radius: .5rem; }
+blockquote { background: transparent; border-left: .375rem solid #dc3545; padding-left: 1rem; }
+footer small a { color: rgba(255,255,255,0.8); text-decoration: none; }
+
+/* Responsive spacing */
+@media (max-width: 992px) {
+  .book-cover img { max-width: 160px; }
+}
+
