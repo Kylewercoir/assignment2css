@@ -1,49 +1,15 @@
-
-@font-face {
-  font-family: "WimpyHeading";
-  src: url("../fonts/KGRedHands.woff2") format("woff2"),
-       url("../fonts/KGRedHands.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "BodyFont";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-:root {
-  --heading-font: "WimpyHeading", Arial, sans-serif;
-  --body-font: "BodyFont", Arial, sans-serif;
-}
-
+/* -------------------------
+   GLOBAL: Notebook Paper Background
+-------------------------- */
 body {
-  font-family: var(--body-font);
-  background: #f9f9f9;
-  color: #333;
+    background: #ffffff;
+    background-image: 
+        linear-gradient(#d0d0d0 1px, transparent 1px);
+    background-size: 100% 28px;
+    font-family: "Arial", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #111;
 }
 
-.heading-font {
-  font-family: var(--heading-font);
-  letter-spacing: 0.5px;
-}
-
-/* HERO */
-.hero {
-  background: green url("images/rr.jpg") repeat;
-}
-
-/* Book images */
-img {
-  border-radius: 4px;
-}
-
-/* Blockquotes */
-blockquote {
-  border-color: #d92525 !important;
-}
-
-/* Card */
-.card {
-  border-radius: 10px;
-}
+/* (Red margin line removed) */
